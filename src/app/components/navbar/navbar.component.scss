@@ -1,0 +1,44 @@
+@import "../../../variables.scss";
+
+nav {
+    background-color: $primary-color;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    position: absolute;
+    align-items: center;
+    width: 70px;
+    top: 0;
+    left: 0;
+}
+
+.material-icons {
+    color: #fff;
+    cursor: pointer;
+    font-size: 35px;
+}
+
+.menu-icon-container {
+    margin-top: 10px;
+}
+
+.open-menu {
+    width: 240px;
+}
+
+.menu-item {
+    margin: 20px 0px;
+}
+
+.menu-item-text {
+    color: #fff;
+    position: relative;
+    top: -10px;
+    left: 10px;
+    font-size: 20px;
+    font-family: 'Catamaran', sans-serif;
+}
+
+a:active {
+    text-decoration: none;
+}

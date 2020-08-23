@@ -1,5 +1,63 @@
-<nav>
-    <div>
-        Home
+<nav [class.open-menu]="isOpen">
+    <div class="menu-icon-container">
+        <i class="material-icons" (click)="toggleMenu()">
+            {{ isOpen === true ? 'menu_open' : 'menu' }}
+        </i>
+    </div>
+    <div class="menu-links-container">
+        <div class="menu-item">
+            <a routerLink="">
+                <i class=" material-icons">home</i>
+                <span class="menu-item-text" [hidden]="isMenuClosed()">Dashboard</span>
+            </a>
+        </div>
+        <div class="menu-item">
+            <a routerLink="/calendar">
+                <i class="material-icons">today</i>
+                <span class="menu-item-text" [hidden]="isMenuClosed()">Calendar</span>
+            </a>
+        </div>
+        <div class="menu-item">
+            <a routerLink="meetings">
+                <i class="material-icons">groups</i>
+                <span class="menu-item-text" [hidden]="isMenuClosed()">Meetings</span>
+            </a>
+        </div>
+        <div class="menu-item">
+            <a routerLink="/chat:id">
+                <i class="material-icons">chat</i>
+                <span class="menu-item-text" [hidden]="isMenuClosed()">Chat</span>
+            </a>
+        </div>
+        <div class="menu-item">
+            <a routerLink="/dailystandup/:userid/:date">
+                <i class="material-icons">create</i>
+                <span class="menu-item-text" [hidden]="isMenuClosed()">Write Progress</span>
+            </a>
+        </div>
+        <div class="menu-item">
+            <a routerLink="view/help-order/:teamid">
+                <i class="material-icons">pan_tool</i>
+                <span class="menu-item-text" [hidden]="isMenuClosed()">Help Orders</span>
+            </a>
+        </div>
+        <div class="menu-item">
+            <a routerLink="view-profile/:id">
+                <i class="material-icons">account_circle</i>
+                <span class="menu-item-text" [hidden]="isMenuClosed()">Profiles</span>
+            </a>
+        </div>
+        <div class="menu-item">
+            <a routerLink="/work-hours">
+                <i class="material-icons">schedule</i>
+                <span class="menu-item-text" [hidden]="isMenuClosed()">Working Hours</span>
+            </a>
+        </div>
+        <div class="menu-item">
+            <a routerLink="/settings">
+                <i class="material-icons">settings</i>
+                <span class="menu-item-text" [hidden]="isMenuClosed()">Settings</span>
+            </a>
+        </div>
     </div>
 </nav>
