@@ -16,6 +16,12 @@ import { AboutComponent } from './pages/about/about.component';
 import { HomeComponent } from './pages/home/home.component';
 import { NotFoundComponent } from './pages/not-found/not-found.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
+import { AppRoutes } from './app.routes';
+import { ChatComponent } from './pages/chat/chat.component';
+import { SettingsComponent } from './pages/settings/settings.component';
+import { WorkHoursComponent } from './pages/work-hours/work-hours.component';
+import { MeetingsComponent } from './pages/meetings/meetings.component';
+import { CalendarComponent } from './pages/calendar/calendar.component';
 
 @NgModule({
   declarations: [
@@ -33,59 +39,15 @@ import { NavbarComponent } from './components/navbar/navbar.component';
     HomeComponent,
     NotFoundComponent,
     NavbarComponent,
+    ChatComponent,
+    SettingsComponent,
+    WorkHoursComponent,
+    MeetingsComponent,
+    CalendarComponent,
   ],
   imports: [
     BrowserModule,
-    RouterModule.forRoot([
-      {
-        path: '',
-        component: HomeComponent
-      },
-      {
-        path: 'dailystandup/:userid/:date',
-        component: DailyStandUpComponent
-      },
-      {
-        path: 'help-order/:id',
-        component: HelpOrderComponent
-      },
-      {
-        path: 'view/help-order/:teamid',
-        component: ViewHelpOrdersComponent
-      },
-      {
-        path: 'view-profile/:id',
-        component: ViewProfileComponent
-      },
-      {
-        path: 'edit-profile/:id',
-        component: EditProfileComponent
-      },
-      {
-        path: 'my-team/:id',
-        component: MyTeamProfilesComponent
-      },
-      {
-        path: 'login',
-        component: LoginComponent
-      },
-      {
-        path: 'sign-up',
-        component: SignUpComponent
-      },
-      {
-        path: 'reset-password',
-        component: ResetPasswordComponent
-      },
-      {
-        path: 'about',
-        component: AboutComponent
-      },
-      {
-        path: '**',
-        component: NotFoundComponent
-      }
-    ])
+    RouterModule.forRoot(AppRoutes)
   ],
   providers: [],
   bootstrap: [AppComponent]
